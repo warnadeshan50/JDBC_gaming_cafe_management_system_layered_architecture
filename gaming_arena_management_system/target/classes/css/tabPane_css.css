@@ -1,0 +1,88 @@
+.tabPane
+{
+    -fx-background-color: #000028;
+    -fx-font-size: 14;
+
+}
+.tabPane
+{
+    -fx-background-color: #000028;
+    -fx-font-size: 14;
+}
+.label
+{
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+.label
+{
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+}
+.table-view
+{
+    -fx-font-size: 9;
+    -fx-font-weight:normal;
+}
+.table-view
+{
+    -fx-font-size: 9;
+    -fx-font-weight: normal;
+}
+.text-field
+{
+    -fx-font-size:15;
+    -fx-font-weight:Bold ;
+}
+.text-field
+{
+    -fx-font-size:15;
+    -fx-font-weight:Bold ;
+    -fx-background-color:#D0F0C0 ;
+}
+.text-field:hover
+{
+    -fx-font-size:15;
+    -fx-font-weight:Bold ;
+    -fx-background-color:#F0E68C ;
+}
+.jfx-combo-box
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: yellow;
+}
+.jfx-combo-box
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: yellow;
+}
+.jfx-combo-box:hover
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: green;
+}
+.button{
+    -fx-background-color:  #16460A;
+    -fx-font-size: 15;
+}
+.button{
+    -fx-background-color:  #16460A;
+    -fx-font-size: 15;
+}
+.button:hover
+{
+    -fx-background-color:  #009F6B;
+    -fx-font-size: 15;
+}
+.button:focused
+{
+    -fx-border-color: yellow;
+    -fx-background-color: #009F6B;
+    -fx-font-size: 15;
+}

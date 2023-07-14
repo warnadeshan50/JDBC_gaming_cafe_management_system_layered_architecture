@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gaming_arena_system.controller.ProductFormController">
+    <children>
+        <TabPane layoutX="9.0" layoutY="14.0" prefHeight="554.0" prefWidth="631.0" styleClass="tabPane" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Products">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0">
+                     <children>
+                        <TableView fx:id="item_tbl" layoutX="233.0" layoutY="60.0" prefHeight="299.0" prefWidth="384.0">
+                           <columns>
+                              <TableColumn fx:id="id_col" prefWidth="86.0" text="Product_ID" />
+                              <TableColumn fx:id="desc_col" prefWidth="99.0" text="Description" />
+                              <TableColumn fx:id="price_col" prefWidth="99.0" text="Price" />
+                              <TableColumn fx:id="status_col" prefWidth="99.0" text="Stock Status" />
+                           </columns>
+                        </TableView>
+                        <Label fx:id="type_lbl" layoutX="233.0" layoutY="25.0" stylesheets="@../css/label_css.css" text="Type" textFill="#00fff1" />
+                        <GridPane layoutX="14.0" layoutY="58.0" prefHeight="400.0" prefWidth="219.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <JFXButton fx:id="motherBoard_btn" onAction="#motherBoard_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Mother Board" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ImageView fitHeight="31.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/product_icon/processor_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../img/product_icon/motherboard_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="ram_btn" onAction="#ram_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="RAM" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <JFXButton fx:id="storage_btn" onAction="#storage_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Storage" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXButton fx:id="vga_btn" onAction="#vga_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="VGA" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <JFXButton fx:id="cooler_btn" onAction="#cooler_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Cooler" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <JFXButton fx:id="monitor_btn" onAction="#monitor_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Monitor" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <JFXButton fx:id="casing_btn" onAction="#casing_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Casing" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <JFXButton fx:id="laptop_btn" onAction="#laptop_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="Laptop" textFill="#00337c" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../img/product_icon/ram.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../img/product_icon/hard-disk_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+                                 <image>
+                                    <Image url="@../img/product_icon/fan_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../img/product_icon/vga_card_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                                 <image>
+                                    <Image url="@../img/product_icon/monitor.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+                                 <image>
+                                    <Image url="@../img/product_icon/pc-tower_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="32.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                                 <image>
+                                    <Image url="@../img/product_icon/laptop_icon.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="cpu_btn" onAction="#cpu_btnOnAction" prefHeight="41.0" prefWidth="165.0" styleClass="jfx-buttton" stylesheets="@../css/product_btn_css.css" text="CPU" textFill="#00337c" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                        </AnchorPane>
+                    </content>
+               <graphic>
+                  <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/product_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Tab>
+            <Tab text="Add Product">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0" stylesheets="@../css/tabPane_css.css">
+                     <children>
+                        <GridPane layoutX="115.0" layoutY="153.0" prefHeight="210.0" prefWidth="401.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Item ID" textFill="#ffa9ff" />
+                              <Label text="Description" textFill="#ffa9ff" GridPane.rowIndex="1" />
+                              <Label text="Type" textFill="#ffa9ff" GridPane.rowIndex="2" />
+                              <Label text="On Hand Qty" textFill="#ffa9ff" GridPane.rowIndex="3" />
+                              <Label text="One Qty Price Rs" textFill="#ffa9ff" GridPane.rowIndex="4" />
+                              <Label fx:id="add_item_id_lbl" text="IT0001" textFill="#ffa9ff" GridPane.columnIndex="1" />
+                              <TextField fx:id="add_description_txt" onAction="#addDescription_txtOnAction" prefHeight="39.0" prefWidth="230.0" promptText="Describe" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <JFXComboBox fx:id="add_type_cmb" onAction="#addType_cmbOnAction" prefHeight="27.0" prefWidth="116.0" promptText="Choose" style="-fx-border-color: Black;" stylesheets="@../css/combo_box_css.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="add_onHandQty_txt" onAction="#addOnHandQty_txtOnAction" onKeyReleased="#addOnHandQty_txtOnKeyReleaased" prefHeight="39.0" prefWidth="230.0" promptText="####" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="add_oneQtyPrice_txt" onAction="#addQtyPrice_txtOnAction" onKeyReleased="#addOneQtyPrice_txtOnKeyReleased" prefHeight="39.0" prefWidth="230.0" promptText="Rs.000" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <ButtonBar layoutX="532.0" layoutY="461.0" prefHeight="40.0" prefWidth="85.0">
+                           <buttons>
+                              <Button fx:id="add_btn" mnemonicParsing="false" onAction="#add_btnOnAction" style="-fx-background-color: #16460A;" text="Add" textFill="#00ff38">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                     </children></AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add_product_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="More">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0">
+                     <children>
+                        <GridPane layoutX="26.0" layoutY="20.0" prefHeight="175.0" prefWidth="370.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="220.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Item ID" textFill="#ffa9ff" />
+                              <Label text="Description" textFill="#ffa9ff" GridPane.rowIndex="1" />
+                              <Label text="On Hand Qty" textFill="#ffa9ff" GridPane.rowIndex="2" />
+                              <Label text="One Qty Price Rs" textFill="#ffa9ff" GridPane.rowIndex="3" />
+                              <TextField fx:id="update_item_id_txt" onAction="#item_id_txtOnAction" onKeyReleased="#item_id_txtOnKeyReleased" promptText="IT#####" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="update_desciption_txt" onAction="#updateDescription_txtOnAction" promptText="Descibe" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="update_onHandQty_txt" onAction="#updateOnHandQtyOnAction" onKeyReleased="#updateOnHandQty_txtOnKeyReleased" promptText="###" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="update_OneQtyPrice_txt" onAction="#updateOneQtyPrice_txtOnAction" onKeyReleased="#updateOneQtyPrice_txtOnKeyReleased" promptText="Rs.####" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </GridPane>
+                        <Label layoutX="417.0" layoutY="76.0" prefHeight="21.0" prefWidth="51.0" text="Type" textFill="#ffa9ff" />
+                        <JFXComboBox fx:id="update_type_cmb" layoutX="490.0" layoutY="66.0" onAction="#updateType_cmbOnAction" prefHeight="27.0" prefWidth="116.0" promptText="Choose" style="-fx-border-color: Black;" stylesheets="@../css/combo_box_css.css" />
+                        <TableView fx:id="product_tbl" layoutX="14.0" layoutY="203.0" prefHeight="248.0" prefWidth="614.0">
+                          <columns>
+                            <TableColumn fx:id="item_id_col" prefWidth="75.0" text="Product ID" />
+                            <TableColumn fx:id="description_col" prefWidth="184.0" text="Description" />
+                              <TableColumn fx:id="type_col" prefWidth="113.0" text="Type" />
+                              <TableColumn fx:id="onHandQty_col" prefWidth="105.0" text="On Hand Qty" />
+                              <TableColumn fx:id="oneQtyPrice_col" prefWidth="136.0" text="One Qty Price&#10;         Rs." />
+                          </columns>
+                        </TableView>
+                        <ButtonBar layoutX="304.0" layoutY="461.0" prefHeight="40.0" prefWidth="319.0">
+                           <buttons>
+                              <Button fx:id="update_btn" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#update_btnOnAction" style="-fx-background-color: #16460A;" text="Update" textFill="#00ff38">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="delete_btn" layoutX="97.0" layoutY="18.0" mnemonicParsing="false" onAction="#delete_btnOnAction" style="-fx-background-color: #16460A;" text="Delete" textFill="#00ff38">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="report_btn" layoutX="37.0" layoutY="11.0" mnemonicParsing="false" onAction="#report_btnOnAction" style="-fx-background-color: #16460A;" text="Report" textFill="#00ff38">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                           </buttons>
+                        </ButtonBar>
+                        <Button fx:id="search_btn" layoutX="417.0" layoutY="27.0" mnemonicParsing="false" onAction="#search_btnOnAction" style="-fx-background-color: #16460A;" text="Search" textFill="#00ff38">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/search_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/more_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            </tabs>
+         <stylesheets>
+            <URL value="@../css/tabPane_css.css" />
+            <URL value="@../css/product_btn_css.css" />
+         </stylesheets>
+        </TabPane>
+    </children>
+</AnchorPane>

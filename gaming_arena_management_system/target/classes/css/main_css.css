@@ -1,0 +1,45 @@
+.jfx-buttton
+{
+    -fx-padding: 20 0 0 7;
+    -fx-background-color: #00b4fc;
+    -fx-background-radius: 30 0 0 30;
+    -fx-border-radius: 30 0 0 30;
+    -fx-font-color: #001449;
+}
+.jfx-button
+{
+    -fx-padding: 20 0 0 7;
+    -fx-background-color: #00b4fc;
+    -fx-background-radius: 30 0 0 30;
+    -fx-border-radius: 30 0 0 30;
+}
+.jfx-button:hover
+{
+    -fx-padding: 10px;
+    -fx-background-color: #17f9ff;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 5;
+    -fx-border-color: white;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-color:#17f9ff;
+}
+.jfx-button:pressed
+{
+    -fx-padding: 10px;
+    -fx-background-color: black;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 5;
+    -fx-border-color: Blue;
+    -fx-border-radius: 0 0 0 0 ;
+}
+.jfx-button:focused
+{
+    -fx-padding: 10px;
+    -fx-background-color: black;
+    -fx-background-radius: 0 0 0 0;
+    -fx-border-width: 5;
+    -fx-border-color: Blue;
+    -fx-border-radius: 0 0 0 0 ;
+}
+
+

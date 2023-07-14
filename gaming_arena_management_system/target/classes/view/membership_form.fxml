@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gaming_arena_system.controller.MembershipFormController">
+   <children>
+      <TabPane layoutX="9.0" layoutY="14.0" prefHeight="554.0" prefWidth="631.0" styleClass="tabPane" stylesheets="@../css/tabPane_css.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab text="Search Member">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0">
+                     <children>
+                        <GridPane layoutX="61.0" layoutY="117.0" prefHeight="276.0" prefWidth="412.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label contentDisplay="BOTTOM" stylesheets="@../css/tabPane_css.css" text="Membership ID" textFill="#ffa9ff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Customer ID" textFill="#ffa9ff" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Name" textFill="#ffa9ff" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Address" textFill="#ffa9ff" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Contact" textFill="#ffa9ff" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="E-mail" textFill="#ffa9ff" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Membership Type" textFill="#ffa9ff" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="s_member_id_txt" onAction="#s_member_idtxtOnAction" onKeyReleased="#s_member_idtxtOnKeyReleased" promptText="MS####" GridPane.columnIndex="1" />
+                              <TextField fx:id="s_customer_id_txt" onAction="#s_customer_id_txtOnAction" onKeyReleased="#s_customer_id_txtOnKeyReleased" promptText="CU####" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="s_name_lbl" contentDisplay="BOTTOM" text="Mr.NoBody" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="s_address_lbl" contentDisplay="BOTTOM" text="Address_of_customer" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="s_contact_lbl" contentDisplay="BOTTOM" text="0xx-xxxxxxx" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="s_email_lbl" contentDisplay="BOTTOM" text="noemail@email.com" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="s_type_lbl" contentDisplay="BOTTOM" text="Type" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="s_member_search_btn" layoutX="482.0" layoutY="126.0" mnemonicParsing="false" onAction="#s_member_search_btnOnAction" text="SEARCH" textFill="#00ff38" />
+                        <Button fx:id="s_customer_search_btn" layoutX="482.0" layoutY="174.0" mnemonicParsing="false" onAction="#s_customer_search_btnOnAction" text="SEARCH" textFill="#00ff38" />
+                        <Label contentDisplay="BOTTOM" layoutX="61.0" layoutY="403.0" prefHeight="8.0" prefWidth="119.0" text="Package Price Rs." textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="s_packagePrice_lbl" contentDisplay="BOTTOM" layoutX="227.0" layoutY="403.0" prefHeight="8.0" prefWidth="119.0" text="####.##" textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/search_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text=" Add Member">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="77.0" layoutY="131.0" prefHeight="179.0" prefWidth="376.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label contentDisplay="BOTTOM" text="Membership ID" textFill="#ffa9ff">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Customer ID" textFill="#ffa9ff" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Membership Type" textFill="#ffa9ff" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label contentDisplay="BOTTOM" text="Price of Package Rs." textFill="#ffa9ff" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="a_member_id_lbl" contentDisplay="BOTTOM" text="MS0001" textFill="#ffa9ff" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="a_customer_id_cmb" onAction="#a_customer_id_cmbOnAction" prefHeight="39.0" prefWidth="132.0" promptText="Choose" styleClass="jfx-combo-box" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <ComboBox fx:id="a_type_cmb" onAction="#a_type_cmbOnAction" prefHeight="39.0" prefWidth="133.0" promptText="Choose" styleClass="jfx-combo-box" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="a_packagePrice_lbl" contentDisplay="BOTTOM" text="000.00" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="add_new_customer_btn" layoutX="436.0" layoutY="168.0" mnemonicParsing="false" onAction="#add_new_customer_btnOnAction" prefHeight="34.0" prefWidth="82.0" stylesheets="@../css/green_btn_css.css" text="+New" textFill="#00ff38" />
+                        <Button fx:id="a_add_btn" layoutX="467.0" layoutY="340.0" mnemonicParsing="false" onAction="#a_add_btnOnAction" prefHeight="29.0" prefWidth="70.0" text="Add" textFill="#00ff38" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/add-user_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            <Tab text="More">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ButtonBar layoutX="529.0" layoutY="461.0" prefHeight="40.0" prefWidth="94.0" />
+                        <TableView fx:id="membership_tbl" layoutX="58.0" layoutY="22.0" prefHeight="260.0" prefWidth="515.0">
+                           <columns>
+                              <TableColumn fx:id="memship_col" prefWidth="123.0" text="Membership ID" />
+                              <TableColumn fx:id="customer_col" prefWidth="117.0" text="Customer ID" />
+                              <TableColumn fx:id="type_col" prefWidth="140.0" text="Type" />
+                              <TableColumn fx:id="packagePrice_col" prefWidth="134.0" text="Package Price Rs" />
+                           </columns>
+                        </TableView>
+                        <Label contentDisplay="BOTTOM" layoutX="159.0" layoutY="301.0" text="Membership ID" textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="BOTTOM" layoutX="162.0" layoutY="353.0" text="Customer ID" textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="BOTTOM" layoutX="187.0" layoutY="404.0" text="Type" textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="BOTTOM" layoutX="153.0" layoutY="451.0" text="Package Price Rs." textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="u_package_price_lbl" contentDisplay="BOTTOM" layoutX="280.0" layoutY="451.0" text="000.00" textFill="#ffa9ff">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="u_type_cmb" layoutX="280.0" layoutY="398.0" onAction="#u_type_cmbOnAction" prefHeight="31.0" prefWidth="131.0" promptText="Choose" styleClass="jfx-combo-box" />
+                        <TextField fx:id="u_member_id_txt" layoutX="280.0" layoutY="296.0" onAction="#u_member_id_txtOnAction" onKeyReleased="#u_member_id_txtOnKeyReleased" prefHeight="31.0" prefWidth="187.0" />
+                        <TextField fx:id="u_customer_id_txt" layoutX="280.0" layoutY="348.0" onAction="#u_customer_id_txt" onKeyReleased="#u_customer_id_txtOnKeyReleased" prefHeight="31.0" prefWidth="186.0" />
+                        <ButtonBar layoutX="421.0" layoutY="471.0" prefHeight="40.0" prefWidth="200.0">
+                           <buttons>
+                              <Button fx:id="update_btn" mnemonicParsing="false" onAction="#update_btnOnAction" text="Update" textFill="#00ff38" />
+                              <Button fx:id="delete_btn" layoutX="135.0" layoutY="18.0" mnemonicParsing="false" onAction="#delete_btnOnAction" text="Delete" textFill="#00ff38" />
+                           </buttons>
+                        </ButtonBar>
+                        <Button fx:id="u_member_search_btn" layoutX="492.0" layoutY="296.0" mnemonicParsing="false" onAction="#u_member_search_btnOnAction" text="SEARCH" textFill="#00ff38" />
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/more_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

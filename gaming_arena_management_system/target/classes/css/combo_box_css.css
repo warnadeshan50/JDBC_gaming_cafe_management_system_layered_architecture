@@ -1,0 +1,21 @@
+.jfx-combo-box
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: yellow;
+}
+.jfx-combo-box
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: yellow;
+}
+.jfx-combo-box:hover
+{
+    -fx-background-radius:5 5 5 5;
+    -fx-font-size: 15;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-color: green;
+}

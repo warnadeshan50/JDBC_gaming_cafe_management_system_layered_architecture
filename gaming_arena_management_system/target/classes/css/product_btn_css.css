@@ -1,0 +1,36 @@
+.jfx-buttton
+{
+    -fx-background-color: #03C988;
+    -fx-background-radius: 0 30 30 0;
+    -fx-border-radius: 0 30 30 0;
+    -fx-font-color: #001449;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+.jfx-buttton
+{
+    -fx-background-color: #03C988;
+    -fx-background-radius: 0 30 30 0;
+    -fx-border-radius: 0 30 30 0;
+    -fx-font-color: #001449;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+.jfx-buttton:hover
+{
+    -fx-background-color: #1C82AD;
+    -fx-background-radius: 0 30 30 0;
+    -fx-border-radius: 0 30 30 0;
+    -fx-font-color: #001449;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}
+.jfx-buttton:focused
+{
+    -fx-background-color: #E9D5DA;
+    -fx-background-radius: 0 30 30 0;
+    -fx-border-radius: 0 30 30 0;
+    -fx-font-color: #001449;
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+}

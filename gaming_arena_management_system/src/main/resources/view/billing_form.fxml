@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="568.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.gaming_arena_system.controller.BillingFormController">
+    <children>
+        <TabPane layoutX="9.0" layoutY="14.0" prefHeight="554.0" prefWidth="631.0" styleClass="tabPane" stylesheets="@../css/tabPane_css.css" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Billing">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0">
+                     <children>
+                        <GridPane layoutX="79.0" layoutY="14.0" prefHeight="251.0" prefWidth="279.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Customer ID" textFill="#ffa9ff" GridPane.rowIndex="1" />
+                              <Label text="Order ID" textFill="#ffa9ff" />
+                              <Label fx:id="order_id_lbl" text="OR0001" textFill="#ffa9ff" GridPane.columnIndex="1" />
+                              <Label text="Name" textFill="#ffa9ff" GridPane.rowIndex="2" />
+                              <Label text="Product ID" textFill="#ffa9ff" GridPane.rowIndex="3" />
+                              <Label text="Desription" textFill="#ffa9ff" GridPane.rowIndex="4" />
+                              <Label text="Price Rs." textFill="#ffa9ff" GridPane.rowIndex="5" />
+                              <JFXComboBox fx:id="customer_id_cmb" onAction="#customer_Id_cmbOnAction" prefHeight="27.0" prefWidth="116.0" promptText="Choose" style="-fx-border-color: Black;" stylesheets="@../css/combo_box_css.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXComboBox fx:id="product_id_cmb" onAction="#product_id_cmbOnAction" prefHeight="27.0" prefWidth="116.0" promptText="Choose" style="-fx-border-color: Black;" stylesheets="@../css/combo_box_css.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="name_lbl" text="Mr.noBody" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="description_lbl" text="About Product" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="price_lbl" text="####.##" textFill="#ffa9ff" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Label layoutX="351.0" layoutY="157.0" text="One Qty Price Rs." textFill="#ffa9ff" />
+                        <Label layoutX="351.0" layoutY="200.0" text="Number Of Qty" textFill="#ffa9ff" />
+                        <Label fx:id="one_qty_price_lbl" layoutX="499.0" layoutY="157.0" text="####.##" textFill="#ffa9ff" />
+                        <TextField fx:id="num_of_qty" layoutX="481.0" layoutY="191.0" onAction="#num_of_qtyOnAction" prefHeight="39.0" prefWidth="54.0" promptText="####">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <TableView fx:id="billing_tbl" layoutX="15.0" layoutY="259.0" prefHeight="200.0" prefWidth="601.0">
+                          <columns>
+                            <TableColumn fx:id="product_col" prefWidth="88.0" text="Product ID" />
+                            <TableColumn fx:id="description_col" prefWidth="173.0" text="Description" />
+                              <TableColumn fx:id="one_qty_price_col" prefWidth="107.0" text="One Qty Price&#10;        Rs." />
+                              <TableColumn fx:id="num_of_qty_col" prefWidth="60.0" text="Num. of&#10;   Qty" />
+                              <TableColumn fx:id="price_col" prefWidth="85.0" text="Price Rs." />
+                              <TableColumn fx:id="remove_col" prefWidth="87.0" text="Remove" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="print_bil_btn" layoutX="493.0" layoutY="465.0" mnemonicParsing="false" onAction="#print_bil_btnOnAction" stylesheets="@../css/green_btn_css.css" text="Print Bill" textFill="#00ff38">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/print_bill_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label layoutX="15.0" layoutY="475.0" text="Total Price Rs." textFill="#ffa9ff" />
+                        <Label fx:id="total_price_lbl" layoutX="131.0" layoutY="475.0" text="#####.##" textFill="#ffa9ff" />
+                        <Label layoutX="235.0" layoutY="475.0" text="Cash  Rs." textFill="#ffa9ff" />
+                        <TextField fx:id="cash_txt" layoutX="304.0" layoutY="465.0" onAction="#cash_txt_OnAction" prefHeight="39.0" prefWidth="145.0" promptText="#####.##">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="add_new_customer_btn" layoutX="361.0" layoutY="61.0" mnemonicParsing="false" onAction="#add_new_customer_btnOnAction" prefHeight="34.0" prefWidth="82.0" stylesheets="@../css/green_btn_css.css" text="+New" textFill="#00ff38" />
+                        <Button fx:id="add_cart_btn" layoutX="546.0" layoutY="193.0" mnemonicParsing="false" onAction="#add_cart_btnOnAction" prefHeight="34.0" prefWidth="58.0" stylesheets="@../css/green_btn_css.css" text="Add" textFill="#00ff38" />
+                     </children></AnchorPane>
+                    </content>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/bill_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+                </Tab>
+            <Tab text="More">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="629.0">
+                     <children>
+                        <TableView fx:id="order_detail_tbl" layoutX="15.0" layoutY="14.0" prefHeight="428.0" prefWidth="601.0">
+                           <columns>
+                              <TableColumn fx:id="order_col" prefWidth="142.0" text="Order ID" />
+                              <TableColumn fx:id="item_col" prefWidth="164.0" text="Item ID" />
+                              <TableColumn fx:id="unit_col" prefWidth="91.0" text="Num. of&#10;   Qty" />
+                              <TableColumn fx:id="tot_price_col" prefWidth="203.0" text="Price Rs." />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="report_btn" layoutX="493.0" layoutY="465.0" mnemonicParsing="false" onAction="#report_btn_OnAction" stylesheets="@../css/green_btn_css.css" text="Report" textFill="#00ff38">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/report_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </content>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/more_icon.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
